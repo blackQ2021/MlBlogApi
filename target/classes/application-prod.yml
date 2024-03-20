@@ -1,0 +1,22 @@
+server:
+  port: 2023
+spring:
+  application:
+    name: inis_blog_syatem
+  datasource:
+    url: jdbc:mysql://localhost:3306/inis_blog_system?characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  jpa:
+    show-sql: false
+  redis:
+    port: 6379
+    host: 192.168.134.20
+    password: 123456
+#   我们使用docker来部署，这里的路径应该是docker的内部路径
+inis.blog.image.save-path: \user\aosp\inisBlog\images
+#   2MB
+inis.blog.image.max-size: 2097152
+#   控制swagger的开关
+inis.blog.swagger.enable: false
